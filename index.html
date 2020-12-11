@@ -94,6 +94,9 @@
 	padding-right: 1%;
 	padding-top: 1%;
 	}
+	img {
+    	pointer-events: none;
+	}
 	</style>
 <body id="menu" class="hh-body alt-bg left-light">
 	<!--[if lt IE 8]>
@@ -627,9 +630,9 @@
 								<ul class="slide-item-list swiper-wrapper">
 									<!-- item -->
 									<li class="item swiper-slide">
-										<a class="slideitem-wrapper" href="#">
+										<a class="slideitem-wrapper" href="#project_url_1">
 											<div class="item-img">
-												<div class="img bg-img" data-image-src="img/team/sameen(1).jpg"></div>
+												<div class="img bg-img" data-image-src="img/team/sam.jpg"></div>
 											</div>
 											<div class="item-desc">
 												<h3 class="title">Sameen Irfan</h3>
@@ -640,7 +643,7 @@
 									</li>
 									<!-- item -->
 									<li class="item swiper-slide">
-										<a class="slideitem-wrapper" href="#">
+										<a class="slideitem-wrapper" href="#project_url_2">
 											<div class="item-img">
 												<div class="img bg-img" data-image-src="img/team/dhavalbaria.jpg"></div>
 											</div>
@@ -652,7 +655,7 @@
 									</li>
 									<!-- item -->
 									<li class="item swiper-slide">
-										<a class="slideitem-wrapper" href="#">
+										<a class="slideitem-wrapper" href="#project_url_3">
 											<div class="item-img">
 												<div class="img bg-img" data-image-src="img/team/drasskoli.jpg"></div>
 											</div>
@@ -664,19 +667,19 @@
 									</li>
 									<!-- item -->
 									<li class="item swiper-slide">
-										<a class="slideitem-wrapper" href="#">
+										<a class="slideitem-wrapper" href="#project_url_2">
 											<div class="item-img">
 												<div class="img bg-img" data-image-src="img/team/musarratnaik.jpg"></div>
 											</div>
 											<div class="item-desc">
-												<h3 class="title">Musarrat Nike</h3>
+												<h3 class="title">Musarrat Naik</h3>
 												<!--<h4>Photo / Instagram</h4>-->
 											</div>
 										</a>
 									</li>
 									<!-- item -->
 									<li class="item swiper-slide">
-										<a class="slideitem-wrapper" href="#">
+										<a class="slideitem-wrapper" href="#project_url_2">
 											<div class="item-img">
 												<div class="img bg-img" data-image-src="img/team/shahidraza.jpg"></div>
 											</div>
@@ -739,12 +742,20 @@
 			<section class="content clearfix">
 				<div class="content-centered c-columns">
 					
-					<!-- <div class="wrapper anim">
+					<div class="wrapper anim">
+						<!-- title and description -->
 						<div class="title-desc">
-							<h2>Register</h2>
-							<p>Subscribe to Newsletter : input your email address below and do not miss our latest news, our freshly new products and many surprising goodies. </p>
+							<h2>Want to kick start your project right now?</h2>
+							<!--<p>Subscribe to Newsletter : input your email address below and do not miss our latest news, our freshly new products and many surprising goodies. </p>-->
 						</div>
-						<div class="subscription">
+						<div class="cta-btns">
+							<a class="btn btn-normal" href="https://api.whatsapp.com/send?phone=919769957392">
+								<span class="txt"> Request a proposal</span>
+								<span class="arrow-icon"></span>
+							</a>
+						</div>
+						<!-- subscription form -->
+						<!--<div class="subscription">
 							<form id="subscription-form" class="form send_email_form zoom-out" method="post" action="">
 								<p class="feedback gone form-success-visible">Thank you for your subscription. We will inform you.</p>
 								<input id="reg-email" class="input form-success-invisible" name="email" type="email" required placeholder="your@email.address" data-validation-type="email">
@@ -752,9 +763,9 @@
 									<span class="ion-checkmark"></span>
 								</button>
 							</form>
-							
-						</div>
-					</div> -->
+						</div>-->
+
+					</div>
 					
 					<div class="c-aside">
 						<div class="centered social-wrap">
@@ -812,8 +823,7 @@
 												<h3 class="title">Address</h3>
 												<div class="desc">
 													<p>
-														Company address
-														<br>South Mumbai
+														South Mumbai
 														<br>Maharashtra, India
 													</p>
 												</div>
@@ -1004,6 +1014,10 @@
 	<!-- Javascript main files -->
 	<script src="js/main.js"></script>
 	<script>
+		$(document).bind("contextmenu",function(e){
+			return false;
+		});
+
 		function waCurrentPage(){
 			if($("#txtname").val()==""){
 				alert("Enter name");
